@@ -26,9 +26,36 @@
 
 -------------------------------------------------
 */
+@font-face {
+  font-family: "Sitka Text";
+  src: local("Sitka Text"), local("SitkaText"), url("fonts/SitkaText.woff2") format("woff2"), url("fonts/SitkaText.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
+  font-family: "Sitka Text";
+  src: local("Sitka Text Bold Italic"), local("SitkaText-BoldItalic"), url("fonts/SitkaText-BoldItalic.woff2") format("woff2"), url("fonts/SitkaText-BoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: block;
+}
+@font-face {
+  font-family: "Sitka Text";
+  src: local("Sitka Text Italic"), local("SitkaText-Italic"), url("fonts/SitkaText-Italic.woff2") format("woff2"), url("fonts/SitkaText-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: block;
+}
+@font-face {
+  font-family: "Sitka Text";
+  src: local("Sitka Text Bold"), local("SitkaText-Bold"), url("fonts/SitkaText-Bold.woff2") format("woff2"), url("fonts/SitkaText-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: block;
+}
 /*--------------- ---- Responsive --------------------------*/
 /*-------------   Color Variable  --------------*/
-@import url("https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600;700;800;900&display=swap");
 .white-bg {
   background: #ffffff;
 }
@@ -81,7 +108,7 @@
   color: #fe5000 !important;
   display: inline-block;
   padding: 18px 44px;
-  font-family: "Muli", sans-serif;
+  font-family: "Sitka Text", sans-serif;
   font-size: 14px;
   font-weight: 400;
   border: 0;
@@ -161,7 +188,7 @@
 
 /* 1. Theme default css */
 body {
-  font-family: "Muli", sans-serif;
+  font-family: "Sitka Text", sans-serif;
   font-weight: normal;
   font-style: normal;
   font-size: 16px;
@@ -173,7 +200,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Muli", sans-serif;
+  font-family: "Sitka Text", sans-serif;
   color: #072366;
   margin-top: 0px;
   font-style: normal;
@@ -182,7 +209,7 @@ h6 {
 }
 
 p {
-  font-family: "Muli", sans-serif;
+  font-family: "Sitka Text", sans-serif;
   color: #10285d;
   font-size: 16px;
   line-height: 30px;
@@ -2620,7 +2647,7 @@ hr {
   margin-right: 30px;
   font-size: 15px;
   font-weight: 100;
-  font-family: "Muli", sans-serif;
+  font-family: "Sitka Text", sans-serif;
   text-transform: normal;
 }
 .header-area .header-top .header-info-left ul li:last-child {
@@ -2656,7 +2683,6 @@ hr {
   display: block;
   font-size: 16px;
   transition: 0.3s;
-  text-transform: capitalize;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .main-header .main-menu ul li a {
@@ -2907,7 +2933,7 @@ hr {
   overflow: hidden;
 }
 .slider-area .hero__caption span {
-  font-family: "Muli", sans-serif;
+  font-family: "Sitka Text", sans-serif;
   font-weight: 800;
   display: block;
 }
@@ -2947,7 +2973,7 @@ hr {
 .slider-area .hero__caption p {
   font-size: 27px;
   color: #fff;
-  font-family: "Muli", sans-serif;
+  font-family: "Sitka Text", sans-serif;
   margin-bottom: 50px;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -4022,7 +4048,7 @@ hr {
   font-size: 17px;
   font-weight: 500;
   text-transform: capitalize;
-  font-family: "Muli", sans-serif;
+  font-family: "Sitka Text", sans-serif;
 }
 .testimonial-area .rattiong-caption span span {
   color: #767676;
@@ -4266,7 +4292,7 @@ hr {
   color: #3a3a3a;
   text-transform: uppercase;
   font-size: 14px;
-  font-family: "Muli", sans-serif;
+  font-family: "Sitka Text", sans-serif;
   color: #3a3a3a;
 }
 .home-blog-area .home-blog-single .blog-img-cap .blog-cap .more-btn:hover {
@@ -4284,7 +4310,7 @@ hr {
 }
 
 .blog_area a {
-  color: "Muli", sans-serif !important;
+  color: "Sitka Text", sans-serif !important;
   text-decoration: none;
   transition: 0.4s;
 }
@@ -5472,7 +5498,7 @@ hr {
   color: #fff;
   font-weight: 900;
   margin-bottom: 0;
-  font-family: "Muli", sans-serif;
+  font-family: "Sitka Text", sans-serif;
   text-transform: capitalize;
 }
 @media (max-width: 767px) {
@@ -5525,7 +5551,7 @@ hr {
   cursor: pointer;
   display: block;
   float: left;
-  font-family: "Muli", sans-serif;
+  font-family: "Sitka Text", sans-serif;
   font-weight: normal;
   width: 100% !important;
   /* height: 42px; */

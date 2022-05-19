@@ -1,126 +1,126 @@
-(function ($)
-  { "use strict"
-  
+(function ($) {
+  "use strict"
 
-/* 1. Proloder */
-    $(window).on('load', function () {
-      $('#preloader-active').delay(450).fadeOut('slow');
-      $('body').delay(450).css({
-        'overflow': 'visible'
-      });
-    });
 
-/* 2. sticky And Scroll UP */
-    $(window).on('scroll', function () {
-      var scroll = $(window).scrollTop();
-      if (scroll < 400) {
-        $(".header-sticky").removeClass("sticky-bar");
-        $('#back-top').fadeOut(500);
-      } else {
-        $(".header-sticky").addClass("sticky-bar");
-        $('#back-top').fadeIn(500);
-      }
+  /* 1. Proloder */
+  $(window).on('load', function () {
+    $('#preloader-active').delay(450).fadeOut('slow');
+    $('body').delay(450).css({
+      'overflow': 'visible'
     });
+  });
+
+  /* 2. sticky And Scroll UP */
+  $(window).on('scroll', function () {
+    var scroll = $(window).scrollTop();
+    if (scroll < 400) {
+      $(".header-sticky").removeClass("sticky-bar");
+      $('#back-top').fadeOut(500);
+    } else {
+      $(".header-sticky").addClass("sticky-bar");
+      $('#back-top').fadeIn(500);
+    }
+  });
 
   // Scroll Up
-    $('#back-top a').on("click", function () {
-      $('body,html').animate({
-        scrollTop: 0
-      }, 800);
-      return false;
+  $('#back-top a').on("click", function () {
+    $('body,html').animate({
+      scrollTop: 0
+    }, 800);
+    return false;
+  });
+
+
+  /* 3. slick Nav */
+  // mobile_menu
+  var menu = $('ul#navigation');
+  if (menu.length) {
+    menu.slicknav({
+      prependTo: ".mobile_menu",
+      closedSymbol: '+',
+      openedSymbol: '-'
     });
-  
-
-/* 3. slick Nav */
-// mobile_menu
-    var menu = $('ul#navigation');
-    if(menu.length){
-      menu.slicknav({
-        prependTo: ".mobile_menu",
-        closedSymbol: '+',
-        openedSymbol:'-'
-      });
-    };
+  };
 
 
 
-    
-/* 4. MainSlider-1 */
-    // h1-hero-active
-    function mainSlider() {
-      var BasicSlider = $('.slider-active');
-      BasicSlider.on('init', function (e, slick) {
-        var $firstAnimatingElements = $('.single-slider:first-child').find('[data-animation]');
-        doAnimations($firstAnimatingElements);
-      });
-      BasicSlider.on('beforeChange', function (e, slick, currentSlide, nextSlide) {
-        var $animatingElements = $('.single-slider[data-slick-index="' + nextSlide + '"]').find('[data-animation]');
-        doAnimations($animatingElements);
-      });
-      BasicSlider.slick({
-        autoplay: false,
-        autoplaySpeed: 4000,
-        dots: false,
-        fade: true,
-        arrows: false, 
-        prevArrow: '<button type="button" class="slick-prev"><i class="ti-angle-left"></i></button>',
-        nextArrow: '<button type="button" class="slick-next"><i class="ti-angle-right"></i></button>',
-        responsive: [{
-            breakpoint: 1024,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1,
-              infinite: true,
-            }
-          },
-          {
-            breakpoint: 991,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1,
-              arrows: false
-            }
-          },
-          {
-            breakpoint: 767,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1,
-              arrows: false
-            }
-          }
-        ]
-      });
 
-      function doAnimations(elements) {
-        var animationEndEvents = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-        elements.each(function () {
-          var $this = $(this);
-          var $animationDelay = $this.data('delay');
-          var $animationType = 'animated ' + $this.data('animation');
-          $this.css({
-            'animation-delay': $animationDelay,
-            '-webkit-animation-delay': $animationDelay
-          });
-          $this.addClass($animationType).one(animationEndEvents, function () {
-            $this.removeClass($animationType);
-          });
-        });
+  /* 4. MainSlider-1 */
+  // h1-hero-active
+  function mainSlider() {
+    var BasicSlider = $('.slider-active');
+    BasicSlider.on('init', function (e, slick) {
+      var $firstAnimatingElements = $('.single-slider:first-child').find('[data-animation]');
+      doAnimations($firstAnimatingElements);
+    });
+    BasicSlider.on('beforeChange', function (e, slick, currentSlide, nextSlide) {
+      var $animatingElements = $('.single-slider[data-slick-index="' + nextSlide + '"]').find('[data-animation]');
+      doAnimations($animatingElements);
+    });
+    BasicSlider.slick({
+      autoplay: false,
+      autoplaySpeed: 4000,
+      dots: false,
+      fade: true,
+      arrows: false,
+      prevArrow: '<button type="button" class="slick-prev"><i class="ti-angle-left"></i></button>',
+      nextArrow: '<button type="button" class="slick-next"><i class="ti-angle-right"></i></button>',
+      responsive: [{
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+        }
+      },
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false
+        }
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false
+        }
       }
+      ]
+    });
+
+    function doAnimations(elements) {
+      var animationEndEvents = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+      elements.each(function () {
+        var $this = $(this);
+        var $animationDelay = $this.data('delay');
+        var $animationType = 'animated ' + $this.data('animation');
+        $this.css({
+          'animation-delay': $animationDelay,
+          '-webkit-animation-delay': $animationDelay
+        });
+        $this.addClass($animationType).one(animationEndEvents, function () {
+          $this.removeClass($animationType);
+        });
+      });
     }
-    mainSlider();
+  }
+  mainSlider();
 
 
 
-/* 4. Testimonial Active*/
-var testimonial = $('.h1-testimonial-active');
-  if(testimonial.length){
-  testimonial.slick({
+  /* 4. Testimonial Active*/
+  var testimonial = $('.h1-testimonial-active');
+  if (testimonial.length) {
+    testimonial.slick({
       dots: false,
       infinite: true,
       speed: 1000,
-      autoplay:true,
-      loop:true,
+      autoplay: true,
+      loop: true,
       arrows: false,
       prevArrow: '<button type="button" class="slick-prev"><i class="ti-arrow-top-left"></i></button>',
       nextArrow: '<button type="button" class="slick-next"><i class="ti-arrow-top-right"></i></button>',
@@ -134,7 +134,7 @@ var testimonial = $('.h1-testimonial-active');
             slidesToScroll: 1,
             infinite: true,
             dots: false,
-            arrow:false
+            arrow: false
           }
         },
         {
@@ -142,7 +142,7 @@ var testimonial = $('.h1-testimonial-active');
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1,
-            arrows:false
+            arrows: false
           }
         },
         {
@@ -150,7 +150,7 @@ var testimonial = $('.h1-testimonial-active');
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1,
-            arrows:false,
+            arrows: false,
           }
         }
       ]
@@ -158,161 +158,161 @@ var testimonial = $('.h1-testimonial-active');
   }
 
 
-/* 6. Nice Selectorp  */
+  /* 6. Nice Selectorp  */
   var nice_Select = $('select');
-    if(nice_Select.length){
-      nice_Select.niceSelect();
-    }
+  if (nice_Select.length) {
+    nice_Select.niceSelect();
+  }
 
- // Brand Active
- $('.brand-active').slick({
-  dots: false,
-  infinite: true,
-  autoplay: true,
-  speed: 400,
-  arrows: false,
-  slidesToShow: 4,
-  slidesToScroll: 1,
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 4,
-        slidesToScroll: 3,
-        infinite: true,
-        dots: false,
+  // Brand Active
+  $('.brand-active').slick({
+    dots: false,
+    infinite: true,
+    autoplay: true,
+    speed: 400,
+    arrows: false,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: false,
+        }
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: false,
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      },
+    ]
+  });
+
+
+
+  // Single Img slder
+  $('.man-slider-active').slick({
+    dots: false,
+    infinite: true,
+    autoplay: true,
+    speed: 400,
+    arrows: true,
+    prevArrow: '<button type="button" class="slick-prev"><i class="ti-angle-left"></i></button>',
+    nextArrow: '<button type="button" class="slick-next"><i class="ti-angle-right"></i></button>',
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: false,
+        }
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: false,
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      },
+    ]
+  });
+
+
+
+  /* 7. data-background */
+  $("[data-background]").each(function () {
+    $(this).css("background-image", "url(" + $(this).attr("data-background") + ")")
+  });
+
+
+  /* 10. WOW active */
+  new WOW().init();
+
+  // 11. ---- Mailchimp js --------//  
+  function mailChimp() {
+    $('#mc_embed_signup').find('form').ajaxChimp();
+  }
+  mailChimp();
+
+
+  // 12 Pop Up Img
+  var popUp = $('.single_gallery_part, .img-pop-up');
+  if (popUp.length) {
+    popUp.magnificPopup({
+      type: 'image',
+      gallery: {
+        enabled: true
       }
-    },
-    {
-      breakpoint: 992,
-      settings: {
-        slidesToShow: 4,
-        slidesToScroll: 3,
-        infinite: true,
-        dots: false,
-      }
-    },
-    {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    },
-  ]
-});
-
-
-
- // Single Img slder
- $('.man-slider-active').slick({
-  dots: false,
-  infinite: true,
-  autoplay: true,
-  speed: 400,
-  arrows: true,
-  prevArrow: '<button type="button" class="slick-prev"><i class="ti-angle-left"></i></button>',
-  nextArrow: '<button type="button" class="slick-next"><i class="ti-angle-right"></i></button>',
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        infinite: true,
-        dots: false,
-      }
-    },
-    {
-      breakpoint: 992,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        infinite: true,
-        dots: false,
-      }
-    },
-    {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    },
-  ]
-});
-
-
-
-/* 7. data-background */
-    $("[data-background]").each(function () {
-      $(this).css("background-image", "url(" + $(this).attr("data-background") + ")")
-      });
-
-
-/* 10. WOW active */
-    new WOW().init();
-
-// 11. ---- Mailchimp js --------//  
-    function mailChimp() {
-      $('#mc_embed_signup').find('form').ajaxChimp();
-    }
-    mailChimp();
-
-
-// 12 Pop Up Img
-    var popUp = $('.single_gallery_part, .img-pop-up');
-      if(popUp.length){
-        popUp.magnificPopup({
-          type: 'image',
-          gallery:{
-            enabled:true
-          }
-        });
-      }
-// 12 Pop Up Video
-    var popUp = $('.popup-video');
-    if(popUp.length){
-      popUp.magnificPopup({
-        type: 'iframe'
-      });
-    }
-
-/* 13. counterUp*/
-    $('.counter').counterUp({
-      delay: 10,
-      time: 3000
     });
+  }
+  // 12 Pop Up Video
+  var popUp = $('.popup-video');
+  if (popUp.length) {
+    popUp.magnificPopup({
+      type: 'iframe'
+    });
+  }
 
-/* 14. Datepicker */
+  /* 13. counterUp*/
+  $('.counter').counterUp({
+    delay: 10,
+    time: 3000
+  });
+
+  /* 14. Datepicker */
   $('#datepicker1').datepicker();
 
-// 15. Time Picker
+  // 15. Time Picker
   $('#timepicker').timepicker();
 
-//16. Overlay
+  //16. Overlay
   $(".snake").snakeify({
     speed: 200
   });
 
 
-//17.  Progress barfiller
+  //17.  Progress barfiller
 
   $('#bar1').barfiller();
   $('#bar2').barfiller();
@@ -324,15 +324,144 @@ var testimonial = $('.h1-testimonial-active');
 
 
 
-// Modal Activation
-    $('.search-switch').on('click', function () {
-      $('.search-model-box').fadeIn(400);
-    });
+  // Modal Activation
+  $('.search-switch').on('click', function () {
+    $('.search-model-box').fadeIn(400);
+  });
 
-    $('.search-close-btn').on('click', function () {
-      $('.search-model-box').fadeOut(400, function () {
-          $('#search-input').val('');
-      });
+  $('.search-close-btn').on('click', function () {
+    $('.search-model-box').fadeOut(400, function () {
+      $('#search-input').val('');
     });
+  });
+
+
 
 })(jQuery);
+
+// Google Map
+function initMap() {
+  var mapEl = document.getElementById('map');
+
+  if (mapEl && typeof google !== "undefined") {
+    var mapLatlng = new google.maps.LatLng(50.426841223319435, 30.519955240981083);
+    var map;
+
+    // var grayStyles = [{
+    //   featureType: "all",
+    //   stylers: [{
+    //     saturation: -90
+    //   },
+    //   {
+    //     lightness: 50
+    //   }
+    //   ]
+    // },
+    // {
+    //   elementType: 'labels.text.fill',
+    //   stylers: [{
+    //     color: '#4f71ad'
+    //   }]
+    // }
+    // ];
+
+    var Styles = [
+      {
+        "elementType": "labels.text.fill",
+        "stylers": [
+          {
+            "color": "#4f71ad"
+          }
+        ]
+      },
+      {
+        "featureType": "administrative",
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "visibility": "off"
+          }
+        ]
+      },
+      {
+        "featureType": "poi",
+        "stylers": [
+          {
+            "visibility": "off"
+          }
+        ]
+      },
+      {
+        "featureType": "road",
+        "elementType": "labels.icon",
+        "stylers": [
+          {
+            "visibility": "off"
+          }
+        ]
+      },
+      {
+        "featureType": "transit",
+        "stylers": [
+          {
+            "visibility": "off"
+          }
+        ]
+      }
+    ];
+
+    try {
+      map = new google.maps.Map(mapEl, {
+        center: mapLatlng,
+        zoom: 17,
+        disableDefaultUI: true,
+        zoomControl: true,
+        scaleControl: false,
+        scrollwheel: false,
+        disableDoubleClickZoom: true,
+        styles: Styles,
+      });
+
+      const svgMarker = {
+        path: "M10.453 14.016l6.563-6.609-1.406-1.406-5.156 5.203-2.063-2.109-1.406 1.406zM12 2.016q2.906 0 4.945 2.039t2.039 4.945q0 1.453-0.727 3.328t-1.758 3.516-2.039 3.070-1.711 2.273l-0.75 0.797q-0.281-0.328-0.75-0.867t-1.688-2.156-2.133-3.141-1.664-3.445-0.75-3.375q0-2.906 2.039-4.945t4.945-2.039z",
+        fillColor: "#294b87",
+        fillOpacity: 0.6,
+        strokeWeight: 0,
+        rotation: 0,
+        scale: 2,
+        anchor: new google.maps.Point(15, 30),
+      };
+
+      new google.maps.Marker({
+        position: map.getCenter(),
+        icon: svgMarker,
+        map: map,
+      });
+
+      // var marker = new google.maps.Marker({
+      //   position: mapLatlng,
+      //   map: map,
+      //   // icon: markerU,
+      //   title: 'ДонТЭМ',
+      //   label: { color: '#008fd7', text: 'ДонТЭМ' },
+      //   animation: google.maps.Animation.DROP,
+      //   zIndex: 1
+      // });
+
+      // marker.setVisible(true);
+    } catch (e) {
+      console.log('Error:' + e.message);
+    }
+  }
+
+
+  // var map = new google.maps.Map(document.getElementById('map'), {
+  //   center: {
+  //     lat: 50.426841223319435,
+  //     lng: 30.519955240981083
+  //   },
+  //   zoom: 9,
+  //   styles: grayStyles,
+  //   scrollwheel: false
+  // });
+}
