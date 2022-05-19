@@ -82,7 +82,7 @@
             font-size: 40px;
             height: 150px;
             width: 150px;
-            color: #ffffff;
+            color: $white;
             border-radius: 50%;
             line-height: 135px;
             border: 10px solid #fff;
@@ -181,7 +181,7 @@
                 left: 50px;
                 h3 {
                     & > a{
-                        color: #ffffff;
+                        color: $white;
                         font-weight: 800;
                         font-size: 28px;
                         margin-bottom: 24px;
