@@ -2606,6 +2606,9 @@ hr {
   color: #fe5000;
 }
 
+.header-area .header-bottom .logo {
+  width: 108px;
+}
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .header-area .header-bottom {
     padding: 17px 0px;
@@ -2878,7 +2881,7 @@ hr {
 }
 
 .slider-height {
-  height: 765px;
+  height: 850px;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .slider-height {
@@ -2923,7 +2926,7 @@ hr {
 
 .slider-area {
   margin-top: -1px;
-  background-image: url(../img/hero/h1_hero.png);
+  background-image: url(../img/hero/h1_hero.jpg);
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
@@ -2944,7 +2947,15 @@ hr {
   color: #fff;
   line-height: 1.2;
   margin-bottom: 29px;
-  text-transform: capitalize;
+}
+.slider-area .hero__caption h1 .h1-color1 {
+  color: #4f71ad;
+}
+.slider-area .hero__caption h1 .h1-color2 {
+  color: #294b87;
+}
+.slider-area .hero__caption h1 .h1-color3 {
+  color: #002556;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .slider-area .hero__caption h1 {
@@ -2970,11 +2981,36 @@ hr {
     line-height: 1.5;
   }
 }
+.slider-area .hero__caption img {
+  height: 16rem;
+  margin-bottom: 50px;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .slider-area .hero__caption img {
+    height: 17rem;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .slider-area .hero__caption img {
+    height: 11rem;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .slider-area .hero__caption img {
+    height: 9rem;
+  }
+}
+@media (max-width: 575px) {
+  .slider-area .hero__caption img {
+    height: 8rem;
+  }
+}
 .slider-area .hero__caption p {
   font-size: 27px;
   color: #fff;
   font-family: "Sitka Text", sans-serif;
   margin-bottom: 50px;
+  text-shadow: 2px 2px 2px rgba(0, 37, 86, 0.5);
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .slider-area .hero__caption p {
@@ -3843,7 +3879,7 @@ hr {
   margin-bottom: 30px;
   display: block;
 }
-.categories-area .single-cat .cat-cap h5 > a {
+.categories-area .single-cat .cat-cap h5 {
   font-size: 24px;
   font-weight: 600;
   margin-bottom: 21px;
@@ -3852,12 +3888,12 @@ hr {
   text-transform: uppercase;
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
-  .categories-area .single-cat .cat-cap h5 > a {
+  .categories-area .single-cat .cat-cap h5 {
     font-size: 21px;
   }
 }
 @media (max-width: 575px) {
-  .categories-area .single-cat .cat-cap h5 > a {
+  .categories-area .single-cat .cat-cap h5 {
     font-size: 23px;
   }
 }
@@ -4161,7 +4197,7 @@ hr {
 .footer-bottom-area .footer-copy-right p {
   color: #fff;
   font-weight: 300;
-  font-size: 16px;
+  font-size: 12px;
   line-height: 2;
   margin-bottom: 12px;
 }
