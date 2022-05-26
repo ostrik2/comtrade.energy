@@ -33,27 +33,19 @@
 								<!-- Main-menu -->
 								<div class="main-menu d-none d-lg-block">
 									<nav>
-										<ul id="navigation">
-											<li class="active"><a href="index.html">Головна</a></li>
-											<li><a href="index.html#about">Про нас</a></li>
-											<li><a href="#">Електроенергія</a></li>
-											<li><a href="#">Газ</a></li>
-											<!-- <li><a href="blog.html">Blog</a>
-                        <ul class="submenu">
-                          <li><a href="blog.html">Blog</a></li>
-                          <li><a href="blog_details.html">Blog Details</a></li>
-                          <li><a href="elements.html">Element</a></li>
-                        </ul>
-                      </li> -->
-											<!-- <li><a href="#">Pages</a>
-                        <ul class="submenu">
-                          <li><a href="project_details.html">Project Details</a></li>
-                          <li><a href="services_details.html">Services Details</a></li>
-                          <li><a href="elements.html">Element</a></li>
-                        </ul>
-                      </li> -->
-											<li><a href="contact.html">Контакти</a></li>
-										</ul>
+
+										ul#navigation
+											li(class=(pagename === "index" ? "active" : undefined))
+												a(href="index.html") Головна
+											li(class=(pagename === "about" ? "active" : undefined))
+												a(href="index.html#about") Про нас
+											li(class=(pagename === "electro" ? "active" : undefined))
+												a(href="electro.html") Електроенергія
+											li(class=(pagename === "gaz" ? "active" : undefined))
+												a(href="gaz.html") Газ
+											li(class=(pagename === "contact" ? "active" : undefined))
+												a(href="contact.html") Контакти
+
 									</nav>
 								</div>
 							</div>
