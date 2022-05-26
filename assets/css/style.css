@@ -54,6 +54,13 @@
   font-style: normal;
   font-display: block;
 }
+@font-face {
+  font-family: "Terminator Genisys";
+  src: url("fonts/subset-TerminatorGenisys.woff2") format("woff2"), url("fonts/subset-TerminatorGenisys.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
 /*--------------- ---- Responsive --------------------------*/
 /*-------------   Color Variable  --------------*/
 .white-bg {
@@ -3338,6 +3345,13 @@ hr {
   .bg-height.pb-160 {
     padding-bottom: 100px;
   }
+}
+
+.about-offset {
+  position: absolute;
+  bottom: 71px;
+  background: #000;
+  width: 100%;
 }
 
 .gallery-area .single-gallery {
