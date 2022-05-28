@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* Theme Description
 -------------------------------------------------
 
@@ -269,7 +268,7 @@ a:focus,
 }
 
 a {
-  color: #635c5c;
+  color: rgb(99, 92, 92);
 }
 
 a:hover {
@@ -454,7 +453,7 @@ hr {
   font-size: 16px;
   background-size: 200%;
   transition: 0.6s;
-  background-image: linear-gradient(to left, #fe5000, #d62d12, #fe5000);
+  background-image: linear-gradient(to left, #fe5000, rgb(214, 45, 18), #fe5000);
   background-position: right;
 }
 .btn i {
@@ -2648,7 +2647,7 @@ hr {
   }
 }
 .header-area .header-top {
-  background: #140C40;
+  background: #140c40;
   padding: 0px 0px;
 }
 .header-area .header-top .header-info-left ul li {
@@ -2722,7 +2721,7 @@ hr {
 .main-header .main-menu ul ul.submenu {
   position: absolute;
   width: 170px;
-  background: #140C40;
+  background: #140c40;
   left: 0;
   top: 90%;
   visibility: hidden;
@@ -2962,7 +2961,7 @@ hr {
   color: #294b87;
 }
 .slider-area .hero__caption h1 .h1-color3 {
-  color: #002556;
+  color: rgb(0, 37, 86);
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .slider-area .hero__caption h1 {
@@ -3081,7 +3080,7 @@ hr {
   top: -21px;
   right: 0;
   z-index: 0;
-  background: #0000;
+  background: rgba(0, 0, 0, 0);
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   .slider-area .video-icon a {
@@ -3426,7 +3425,7 @@ hr {
 }
 .gallery-area .single-gallery .thumb-content-box .thumb-content p {
   font-size: 16px;
-  color: #ffff;
+  color: white;
   padding: 0 82px;
   line-height: 1.6;
 }
@@ -3750,7 +3749,7 @@ hr {
 }
 .contact-form .single-gallery .thumb-content-box .thumb-content p {
   font-size: 16px;
-  color: #ffff;
+  color: white;
   padding-right: 49px;
   line-height: 1.6;
 }
@@ -4078,7 +4077,7 @@ hr {
 .testimonial-area .testimonial-caption p {
   font-size: 28px;
   color: #072366;
-  color: #140C40;
+  color: #140c40;
   line-height: 45px;
   line-height: 1.5;
   margin-bottom: 37px;
@@ -4203,7 +4202,7 @@ hr {
 }
 
 .footer-bottom-area {
-  background: #140C40;
+  background: #140c40;
 }
 .footer-bottom-area .footer-border {
   padding: 18px 0px 4px;
@@ -4994,7 +4993,7 @@ hr {
 .blog_right_sidebar .br {
   width: 100%;
   height: 1px;
-  background: #eeeeee;
+  background: rgb(238, 238, 238);
   margin: 30px 0px;
 }
 
@@ -5405,7 +5404,7 @@ hr {
   color: #2a2a2a;
 }
 .contact-info .media-body h3 a:hover {
-  color: #140C40;
+  color: #140c40;
 }
 .contact-info .media-body p {
   color: #8a8a8a;
@@ -5511,7 +5510,7 @@ hr {
   margin-top: 0;
 }
 .contact-section .btn_2:hover {
-  background-color: #140C40;
+  background-color: #140c40;
 }
 
 .breadcam_bg {
@@ -5626,7 +5625,7 @@ hr {
   color: #919191;
 }
 .popup_box .nice-select::after {
-  content: "";
+  content: "\f0d7";
   display: block;
   height: 5px;
   margin-top: -5px;
@@ -5745,7 +5744,7 @@ hr {
 }
 
 .overlay2::before {
-  background-image: -ms-linear-gradient(170deg, rgba(34, 34, 34, 0) 0%, black 100%);
+  background-image: -ms-linear-gradient(170deg, rgba(34, 34, 34, 0) 0%, rgb(0, 0, 0) 100%);
 }
 
 .sample-text-area {
@@ -5763,7 +5762,7 @@ sup,
 sub,
 u,
 del {
-  color: #140C40;
+  color: #140c40;
 }
 
 .typography h1,
@@ -5852,22 +5851,22 @@ del {
 }
 .genric-btn.primary {
   color: #fff;
-  background: #140C40;
+  background: #140c40;
   border: 1px solid transparent;
 }
 .genric-btn.primary:hover {
-  color: #140C40;
-  border: 1px solid #140C40;
+  color: #140c40;
+  border: 1px solid #140c40;
   background: #fff;
 }
 .genric-btn.primary-border {
-  color: #140C40;
-  border: 1px solid #140C40;
+  color: #140c40;
+  border: 1px solid #140c40;
   background: #fff;
 }
 .genric-btn.primary-border:hover {
   color: #fff;
-  background: #140C40;
+  background: #140c40;
   border: 1px solid transparent;
 }
 .genric-btn.success {
@@ -5982,7 +5981,7 @@ del {
 .generic-blockquote {
   padding: 30px 50px 30px 30px;
   background: #f9f9ff;
-  border-left: 2px solid #140C40;
+  border-left: 2px solid #140c40;
 }
 
 .progress-table-wrap {
@@ -6092,9 +6091,9 @@ del {
   position: absolute;
   width: 14px;
   height: 14px;
-  border: 3px solid #140C40;
+  border: 3px solid #140c40;
   background: #fff;
-  top: 4px;
+  top: 7px;
   left: 0;
   border-radius: 50%;
 }
@@ -6104,7 +6103,7 @@ del {
 }
 .ordered-list li {
   list-style-type: decimal-leading-zero;
-  color: #140C40;
+  color: #140c40;
   font-weight: 500;
   line-height: 1.82em !important;
 }
@@ -6116,7 +6115,7 @@ del {
 .ordered-list-alpha li {
   margin-left: 30px;
   list-style-type: lower-alpha;
-  color: #140C40;
+  color: #140c40;
   font-weight: 500;
   line-height: 1.82em !important;
 }
@@ -6128,7 +6127,7 @@ del {
 .ordered-list-roman li {
   margin-left: 30px;
   list-style-type: lower-roman;
-  color: #140C40;
+  color: #140c40;
   font-weight: 500;
   line-height: 1.82em !important;
 }
@@ -6193,7 +6192,7 @@ del {
 }
 .single-input-primary:focus {
   outline: none;
-  border: 1px solid #140C40;
+  border: 1px solid #140c40;
 }
 
 .single-input-accent {
@@ -6250,7 +6249,7 @@ del {
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  background: #140C40;
+  background: #140c40;
   transition: all 0.2s;
   box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.2);
   cursor: pointer;
@@ -6317,7 +6316,7 @@ del {
   left: 19px;
 }
 .primary-switch input:checked + label:before {
-  background: #140C40;
+  background: #140c40;
 }
 
 .confirm-switch {
@@ -6627,11 +6626,11 @@ del {
   padding-left: 20px;
 }
 .default-select .nice-select .list .option.selected {
-  color: #140C40;
+  color: #140c40;
   background: transparent;
 }
 .default-select .nice-select .list .option:hover {
-  color: #140C40;
+  color: #140c40;
   background: transparent;
 }
 .default-select .current {
@@ -6672,11 +6671,11 @@ del {
   padding-left: 45px;
 }
 .form-select .nice-select .list .option.selected {
-  color: #140C40;
+  color: #140c40;
   background: transparent;
 }
 .form-select .nice-select .list .option:hover {
-  color: #140C40;
+  color: #140c40;
   background: transparent;
 }
 .form-select .current {
@@ -6706,4 +6705,31 @@ del {
 
 .switch-wrap {
   margin-bottom: 10px;
+}
+
+.electro-section {
+  padding: 100px 0 100px;
+}
+@media (max-width: 991px) {
+  .electro-section {
+    padding: 70px 0 40px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .electro-section {
+    padding: 80px 0 50px;
+  }
+}
+.electro-section a {
+  color: #3B4855;
+}
+.electro-section a:hover {
+  color: #fe5000;
+  padding-left: 5px;
+}
+.electro-section h3 {
+  margin-bottom: 20px;
+  margin-top: 30px;
+  color: #fe5000;
+  font-size: 20px;
 }
