@@ -27,3 +27,44 @@
 	}
 
 }
+
+.energo-services {
+	margin-top: 100px;
+	margin-bottom: 100px;
+
+	&-img {
+		padding-top: 62.5%;
+		position: relative;
+		height: 100%;
+
+		img {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			object-fit: cover;
+		}
+	}
+
+	&-cap {
+		display: flex;
+		flex-direction: column;
+		min-height: 100%;
+		align-items: start;
+
+		.btn {
+			margin-top: auto;
+			margin-bottom: 20px;
+			min-width: 300px;
+		}
+
+
+		h3 {
+			font-size: 20px;
+			font-weight: bold;
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+	}
+}
