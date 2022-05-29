@@ -59,8 +59,9 @@
 			doAnimations($animatingElements);
 		});
 		BasicSlider.slick({
-			autoplay: false,
-			autoplaySpeed: 4000,
+			pauseOnHover: true,
+			autoplay: true,
+			autoplaySpeed: 6000,
 			dots: false,
 			fade: true,
 			arrows: false,
@@ -336,8 +337,6 @@
 	$('#bar6').barfiller();
 
 
-
-
 	// Modal Activation
 	$('.search-switch').on('click', function () {
 		$('.search-model-box').fadeIn(400);
@@ -360,24 +359,6 @@ function initMap() {
 	if (mapEl && typeof google !== "undefined") {
 		var mapLatlng = new google.maps.LatLng(50.426841223319435, 30.519955240981083);
 		var map;
-
-		// var grayStyles = [{
-		//   featureType: "all",
-		//   stylers: [{
-		//     saturation: -90
-		//   },
-		//   {
-		//     lightness: 50
-		//   }
-		//   ]
-		// },
-		// {
-		//   elementType: 'labels.text.fill',
-		//   stylers: [{
-		//     color: '#4f71ad'
-		//   }]
-		// }
-		// ];
 
 		var Styles = [
 			{
@@ -452,30 +433,10 @@ function initMap() {
 				map: map,
 			});
 
-			// var marker = new google.maps.Marker({
-			//   position: mapLatlng,
-			//   map: map,
-			//   // icon: markerU,
-			//   title: 'ДонТЭМ',
-			//   label: { color: '#008fd7', text: 'ДонТЭМ' },
-			//   animation: google.maps.Animation.DROP,
-			//   zIndex: 1
-			// });
-
 			// marker.setVisible(true);
 		} catch (e) {
 			console.log('Error:' + e.message);
 		}
 	}
 
-
-	// var map = new google.maps.Map(document.getElementById('map'), {
-	//   center: {
-	//     lat: 50.426841223319435,
-	//     lng: 30.519955240981083
-	//   },
-	//   zoom: 9,
-	//   styles: grayStyles,
-	//   scrollwheel: false
-	// });
 }
