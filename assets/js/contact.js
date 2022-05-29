@@ -35,7 +35,7 @@ $(document).ready(function () {
 				},
 				messages: {
 					name: {
-						required: "Адже у вас є ім'я, чи не так?",
+						required: "Адже у Вас є ім'я, чи не так?",
 						minlength: "Ваше ім'я повинно складатися як мінімум з 2 символів."
 					},
 					subject: {
