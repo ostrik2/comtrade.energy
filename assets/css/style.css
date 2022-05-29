@@ -3356,14 +3356,15 @@ hr {
 
 .about-offset {
   position: absolute;
-  bottom: 71px;
-  background: #000;
-  width: 100%;
+  bottom: 200px;
 }
 
 .about-area {
   background: rgb(130, 176, 228);
   background: linear-gradient(135deg, rgba(130, 176, 228, 0.2) 0%, rgba(56, 114, 177, 0.2) 50%, rgba(0, 74, 139, 0.2) 100%);
+}
+.about-area .row {
+  align-items: center;
 }
 @media (max-width: 575px) {
   .about-area .row {
@@ -3372,6 +3373,7 @@ hr {
 }
 .about-area p {
   text-align: right;
+  margin: 7px 0;
 }
 @media (max-width: 575px) {
   .about-area p {
@@ -3380,6 +3382,7 @@ hr {
 }
 .about-area .slogan {
   font-family: "Terminator Genisys", sans-serif;
+  font-size: 20px;
 }
 .about-area h3 {
   font-family: "Terminator Genisys", sans-serif;
@@ -4177,6 +4180,9 @@ hr {
 
 .footer-area {
   background: #F5F9FB;
+}
+.footer-area .logo {
+  width: 255px;
 }
 .footer-area .footer-pera p {
   color: #3B4855;
@@ -5435,7 +5441,8 @@ hr {
 .contact-info__icon {
   margin-right: 20px;
 }
-.contact-info__icon i, .contact-info__icon span {
+.contact-info__icon i,
+.contact-info__icon span {
   color: #8f9195;
   font-size: 27px;
 }
@@ -5553,6 +5560,10 @@ hr {
 }
 .contact-section .btn_2:hover {
   background-color: #140c40;
+}
+.contact-section .contact-offset {
+  position: absolute;
+  bottom: 200px;
 }
 
 .breadcam_bg {

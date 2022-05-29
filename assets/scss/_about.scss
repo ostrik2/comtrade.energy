@@ -177,10 +177,10 @@
 .about-offset {
 	position: absolute;
 	// top: calc(850px + 135px - 91px);
-	bottom: 71px;
-	background: #000;
+	bottom: 200px;
+	// background: #000;
 	// height: 10px;
-	width: 100%;
+	// width: 100%;
 }
 
 .about-area {
@@ -189,14 +189,18 @@
 	background: rgb(130, 176, 228);
 	background: linear-gradient(135deg, rgba(130, 176, 228, 0.2) 0%, rgba(56, 114, 177, 0.2) 50%, rgba(0, 74, 139, 0.2) 100%);
 
-	@media #{$xs} {
-		.row {
+	.row {
+		align-items: center;
+
+		@media #{$xs} {
 			flex-direction: column-reverse;
 		}
+
 	}
 
 	p {
 		text-align: right;
+		margin: 7px 0;
 
 		@media #{$xs} {
 			text-align: left;
@@ -206,6 +210,7 @@
 	.slogan {
 		// font-weight: bold;
 		font-family: $font_3;
+		font-size: 20px;
 	}
 
 	h3 {
