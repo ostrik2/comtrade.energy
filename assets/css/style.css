@@ -27,35 +27,35 @@
 */
 @font-face {
   font-family: "Sitka Text";
-  src: local("Sitka Text"), local("SitkaText"), url("fonts/SitkaText.woff2") format("woff2"), url("fonts/SitkaText.woff") format("woff");
+  src: local("Sitka Text"), local("SitkaText"), url("../fonts/SitkaText.woff2") format("woff2"), url("../fonts/SitkaText.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 @font-face {
   font-family: "Sitka Text";
-  src: local("Sitka Text Bold Italic"), local("SitkaText-BoldItalic"), url("fonts/SitkaText-BoldItalic.woff2") format("woff2"), url("fonts/SitkaText-BoldItalic.woff") format("woff");
+  src: local("Sitka Text Bold Italic"), local("SitkaText-BoldItalic"), url("../fonts/SitkaText-BoldItalic.woff2") format("woff2"), url("../fonts/SitkaText-BoldItalic.woff") format("woff");
   font-weight: bold;
   font-style: italic;
   font-display: block;
 }
 @font-face {
   font-family: "Sitka Text";
-  src: local("Sitka Text Italic"), local("SitkaText-Italic"), url("fonts/SitkaText-Italic.woff2") format("woff2"), url("fonts/SitkaText-Italic.woff") format("woff");
+  src: local("Sitka Text Italic"), local("SitkaText-Italic"), url("../fonts/SitkaText-Italic.woff2") format("woff2"), url("../fonts/SitkaText-Italic.woff") format("woff");
   font-weight: normal;
   font-style: italic;
   font-display: block;
 }
 @font-face {
   font-family: "Sitka Text";
-  src: local("Sitka Text Bold"), local("SitkaText-Bold"), url("fonts/SitkaText-Bold.woff2") format("woff2"), url("fonts/SitkaText-Bold.woff") format("woff");
+  src: local("Sitka Text Bold"), local("SitkaText-Bold"), url("../fonts/SitkaText-Bold.woff2") format("woff2"), url("../fonts/SitkaText-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: block;
 }
 @font-face {
   font-family: "Terminator Genisys";
-  src: url("fonts/subset-TerminatorGenisys.woff2") format("woff2"), url("fonts/subset-TerminatorGenisys.woff") format("woff");
+  src: url("../fonts/subset-TerminatorGenisys.woff2") format("woff2"), url("../fonts/subset-TerminatorGenisys.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -2621,7 +2621,7 @@ hr {
 }
 
 .header-area .header-bottom .logo {
-  width: 108px;
+  width: 255px;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .header-area .header-bottom {
@@ -2969,7 +2969,7 @@ hr {
   color: #294b87;
 }
 .slider-area .hero__caption h1 .h1-color3 {
-  color: rgb(0, 37, 86);
+  color: #002556;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .slider-area .hero__caption h1 {
@@ -3359,6 +3359,40 @@ hr {
   bottom: 71px;
   background: #000;
   width: 100%;
+}
+
+.about-area {
+  background: rgb(130, 176, 228);
+  background: linear-gradient(135deg, rgba(130, 176, 228, 0.2) 0%, rgba(56, 114, 177, 0.2) 50%, rgba(0, 74, 139, 0.2) 100%);
+}
+@media (max-width: 575px) {
+  .about-area .row {
+    flex-direction: column-reverse;
+  }
+}
+.about-area p {
+  text-align: right;
+}
+@media (max-width: 575px) {
+  .about-area p {
+    text-align: left;
+  }
+}
+.about-area .slogan {
+  font-family: "Terminator Genisys", sans-serif;
+}
+.about-area h3 {
+  font-family: "Terminator Genisys", sans-serif;
+  font-size: 30px;
+}
+.about-area h3.h3-color1 {
+  color: #4f71ad;
+}
+.about-area h3.h3-color2 {
+  color: #294b87;
+}
+.about-area h3.h3-color3 {
+  color: #002556;
 }
 
 .gallery-area .single-gallery {
@@ -6743,8 +6777,8 @@ del {
 }
 
 .energo-services {
-  margin-top: 100px;
-  margin-bottom: 100px;
+  background: rgb(79, 113, 173);
+  background: linear-gradient(135deg, rgba(79, 113, 173, 0.2) 0%, rgba(41, 75, 135, 0.2) 50%, rgba(0, 37, 86, 0.2) 100%);
 }
 .energo-services-img {
   padding-top: 62.5%;

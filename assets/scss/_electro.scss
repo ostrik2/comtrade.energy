@@ -29,8 +29,9 @@
 }
 
 .energo-services {
-	margin-top: 100px;
-	margin-bottom: 100px;
+	// background-color: #3872b1;
+	background: rgb(79, 113, 173);
+	background: linear-gradient(135deg, rgba(79, 113, 173, 0.2) 0%, rgba(41, 75, 135, 0.2) 50%, rgba(0, 37, 86, 0.2) 100%);
 
 	&-img {
 		padding-top: 62.5%;
