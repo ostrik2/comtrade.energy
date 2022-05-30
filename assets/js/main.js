@@ -357,7 +357,8 @@ function initMap() {
 	var mapEl = document.getElementById('map');
 
 	if (mapEl && typeof google !== "undefined") {
-		var mapLatlng = new google.maps.LatLng(50.426841223319435, 30.519955240981083);
+		// var mapLatlng = new google.maps.LatLng(50.426841223319435, 30.519955240981083);
+		var mapLatlng = new google.maps.LatLng(50.426663941629734, 30.519974016270343);
 		var map;
 
 		var Styles = [
@@ -424,7 +425,7 @@ function initMap() {
 				strokeWeight: 0,
 				rotation: 0,
 				scale: 2,
-				anchor: new google.maps.Point(15, 30),
+				anchor: new google.maps.Point(10, 15),
 			};
 
 			new google.maps.Marker({
