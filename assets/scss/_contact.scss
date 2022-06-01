@@ -53,6 +53,25 @@
 }
 
 .form-contact {
+	position: relative;
+
+	&::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(112, 99, 204, 0.34) url("../img/elements/loading.gif") center / 50px no-repeat;
+		opacity: 0;
+		visibility: hidden;
+		transition: all 0.5s ease 0s;
+	}
+
+	&._sending::after {
+		opacity: 1;
+		visibility: visible;
+	}
 
 	label {
 		font-size: 14px;

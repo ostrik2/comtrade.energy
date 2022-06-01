@@ -55,26 +55,35 @@ $(document).ready(function () {
 					}
 				},
 				submitHandler: function (form) {
+					$(form).addClass('_sending');
 					$(form).ajaxSubmit({
 						type: "POST",
 						data: $(form).serialize(),
 						url: "contact_process.php",
 						success: function () {
-							$('#contactForm :input').attr('disabled', 'disabled');
-							$('#contactForm').fadeTo("slow", 1, function () {
-								$(this).find(':input').attr('disabled', 'disabled');
-								$(this).find('label').css('cursor', 'default');
-								$('#success').fadeIn()
-								$('.modal').modal('hide');
-								$('#success').modal('show');
-							})
+							// $('#contactForm :input').attr('disabled', 'disabled');
+							$(form).fadeTo('slow', 1, function () {
+								$(form).trigger('reset');
+								$(form).removeClass('_sending');
+							});
+							// $(form).fadeTo('slow', 0.3, function () {
+							// 	$(this).find(':input').attr('disabled', 'disabled');
+							// 	$(this).find('label').css('cursor', 'default');
+							// 	$('#success').fadeIn()
+							// 	$('.modal').modal('hide');
+							// 	$('#success').modal('show');
+							// })
 						},
 						error: function () {
-							$('#contactForm').fadeTo("slow", 1, function () {
-								$('#error').fadeIn()
-								$('.modal').modal('hide');
-								$('#error').modal('show');
-							})
+							$(form).fadeTo('slow', 1, function () {
+								// $(form).trigger('reset');
+								$(form).removeClass('_sending');
+							});
+							// $(form).fadeTo('slow', 0.3, function () {
+							// 	$('#error').fadeIn()
+							// 	$('.modal').modal('hide');
+							// 	$('#error').modal('show');
+							// })
 						}
 					})
 				}
