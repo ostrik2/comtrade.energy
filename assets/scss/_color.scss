@@ -1,5 +1,9 @@
 /*-------------   Color Variable  --------------*/
 
+$base-color: #11840d;
+$accent-color: #efbf0f;
+$contrast-color: #225db4;
+
 //Colors
 $white: #ffffff;
 $black: #16161a;
@@ -8,7 +12,9 @@ $gray: #f7f7fd;
 //Theme color
 // $theme-color: #FF3514;
 $theme-color: #fe5000;
-$theme-color2: #140c40;
+$theme-color: $accent-color;
+// $theme-color2: #140c40;
+$theme-color2: $base-color;
 $theme-color3: #f27420;
 $theme-color4: #ff3500;
 
@@ -16,8 +22,11 @@ $theme-color4: #ff3500;
 $btn_bg: #09cc7f;
 
 // Heading color
-$heading-color: #072366;
+// $heading-color: #072366;
+$heading-color: $contrast-color;
 $heading_color2: #080808;
+$heading_color3: darken(#11840d, 10%);
+$heading_color3: $contrast-color;
 
 
 // Body Font
@@ -43,7 +52,8 @@ $gray-color-2: #bdbdbd;
 
 
 // font color
-$font_color1: #10285d;
+// $font_color1: #10285d;
+$font_color1: $base-color;
 $border_color: #fdcb9e;
 
 
