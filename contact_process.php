@@ -1,6 +1,6 @@
 <?php
 
-$to = "office@tviy.energy";
+$to = "comtrade.energy.llc@gmail.com";
 $from = $_REQUEST['email'];
 $name = $_REQUEST['name'];
 $csubject = $_REQUEST['subject'];
@@ -12,12 +12,12 @@ $headers .= "Reply-To: " . $from . "\r\n";
 $headers .= "MIME-Version: 1.0\r\n";
 $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 
-$subject = "У вас є повідомлення від tviy.energy.";
+$subject = "У вас є повідомлення від comtrade.energy.";
 
-$logo = 'https://tviy.energy/assets/img/logo/logo.png';
-$link = 'https://tviy.energy/';
+$logo = 'https://comtrade.energy/assets/img/logo/logo.png';
+$link = 'https://comtrade.energy/';
 
-$body = "<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><title>Повідомлення від tviy.energy.</title></head><body>";
+$body = "<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><title>Повідомлення від comtrade.energy.</title></head><body>";
 $body .= "<table style='width: 100%;'>";
 $body .= "<thead style='text-align: center;'><tr><td style='border:none;' colspan='2'>";
 $body .= "<a href='{$link}'><img src='{$logo}' alt='logo'></a><br><br>";
