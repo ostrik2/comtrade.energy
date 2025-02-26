@@ -1,0 +1,78 @@
+include include/head.html
+
+body
+  include include/preloader.html
+  - const pagename = "contact"
+  include include/header.pug
+
+  main
+    // Hero Start
+    .slider-area2.section-bg2(data-background="assets/img/hero/hero5.jpg")
+      .slider-height2.d-flex.align-items-center
+        .container
+          .row
+            .col-xl-12
+              .hero-cap.hero-cap2.text-center
+                h2 Контакти
+
+    // Contact Area Start
+    section.contact-section
+      .container
+        .d-none.d-sm-block.mb-5.pb-4(style="position: relative;")
+          #map(style="height: 480px; width: 100%; position: relative; overflow: hidden;")
+            iframe(src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3593.19590243746!2d30.611347173170742!3d50.44532523808002!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c558db1830e1%3A0x41f9263dd6b9a2b6!2zMTVBLCDQv9GA0L7RgdC_0LXQutGCINCc0LjRgNGDLCAxNdCQLCDQmtC40ZfQsiwgMDIwMDA!5e0!3m2!1suk!2sua!4v1740415799153!5m2!1suk!2sua" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade")
+          .contact-offset#contact-form
+
+        .row
+          .col-12
+            h2.contact-title Зв'язок
+
+          .col-lg-8
+            form.form-contact.contact_form#contactForm(method="post" novalidate="novalidate")
+              .row
+                .col-12
+                  .form-group
+                    textarea.form-control.w-100#message(name="message" cols="30" rows="9" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Введіть повідомлення'" placeholder="Введіть повідомлення" required)
+                .col-sm-6
+                  .form-group
+                    input.form-control.valid#name(name="name" type="text" autocomplete="name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Введіть своє ім`я'" placeholder="Введіть своє ім'я" required)
+                .col-sm-6
+                  .form-group
+                    input.form-control.valid#email(name="email" type="email" autocomplete="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Введіть Email'" placeholder="Введіть Email" required)
+                .col-12
+                  .form-group
+                    input.form-control#subject(name="subject" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Введіть тему'" placeholder="Введіть тему" required)
+                // Скрытое поле для CSRF-токена
+                .col-12
+                  input(type="hidden" name="csrf_token" id="csrf-token")
+              .form-group.mt-3
+                button.button.button-contactForm.boxed-btn(type="submit") Відправити
+
+          .col-lg-3.offset-lg-1
+            .media.contact-info
+              span.contact-info__icon
+                i.ti-home
+              .media-body
+                h3 02105, м. Київ,
+                p проспект Миру,<br>буд. 15А, офіс 104
+            .media.contact-info
+              span.contact-info__icon
+                i.ti-tablet
+              .media-body
+                h3 +38 (075) 411 22 04
+                p Пн-Пт 9:00-18:00
+            .media.contact-info
+              span.contact-info__icon
+                i.ti-email
+              .media-body
+                h3 comtrade.energy.llc@gmail.com
+                p Надсилайте нам свій запит в будь-який час!
+            .media.contact-info
+              span.contact-info__icon
+                i.ti-user
+              .media-body
+                h3 Директор:
+                p ПУСТОВА<br>КАТЕРИНА ПАВЛІВНА
+
+  include include/footer.html
+  include include/bottom.html

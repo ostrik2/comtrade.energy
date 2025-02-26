@@ -1,75 +1,53 @@
-<header>
-	<!-- Header Start -->
-	<div class="header-area">
-		<div class="main-header ">
-			<div class="header-top">
-				<div class="container">
-					<div class="col-xl-12">
-						<div class="row d-flex justify-content-md-between justify-content-end align-items-center">
-							<div class="header-info-left d-none d-md-block">
-								<ul>
-									<li><i class="fas fa-phone"></i>+38 (075) 411 22 04</li>
-									<li><i class="far fa-envelope"></i>comtrade.energy.llc@gmail.com</li>
-								</ul>
-							</div>
-							<div class="header-info-right">
-								<a href="https://my.tviy.energy" class="btn">Особистий кабінет<i class="ti-arrow-right"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="header-bottom header-sticky">
-				<div class="container">
-					<div class="row align-items-center">
-						<!-- Logo -->
-						<div class="col-xl-4 col-lg-4">
-							<div class="logo">
-								<a href="index.html"><img src="assets/img/logo/logo.svg" alt="logo"></a>
-							</div>
-						</div>
-						<div class="col-xl-7 col-lg-6">
-							<div class="menu-wrapper  d-flex align-items-center">
-								<!-- Main-menu -->
-								<div class="main-menu d-none d-lg-block">
-									<nav>
+header
+	// Header Start
+	.header-area
+		.main-header
+			.header-top
+				.container
+					.col-xl-12
+						.row.d-flex.justify-content-md-between.justify-content-end.align-items-center
+							.header-info-left.d-none.d-md-block
+								ul
+									li
+										i.fas.fa-phone
+										| +38 (075) 411 22 04
+									li
+										i.far.fa-envelope
+										| comtrade.energy.llc@gmail.com
+							.header-info-right
+								a.btn(href="https://my.tviy.energy")
+									| Особистий кабінет
+									i.ti-arrow-right
 
+			.header-bottom.header-sticky
+				.container
+					.row.align-items-center
+						// Logo
+						.col-xl-4.col-lg-4
+							.logo
+								a(href="index.html")
+									img(src="assets/img/logo/logo.svg" alt="logo")
+						.col-xl-7.col-lg-6
+							.menu-wrapper.d-flex.align-items-center
+								// Main-menu
+								.main-menu.d-none.d-lg-block
+									nav
 										ul#navigation
-											li(class=(pagename === "index" ? "active" : undefined))
+											li
 												a(href="index.html") Головна
-											//- li(class=(pagename === "about" ? "active" : undefined))
-											//- 	a(href="index.html#about") Про нас
-											li(class=(pagename === "electro" ? "active" : undefined))
+											li
 												a(href="electro.html") Електроенергія
-											li(class=(pagename === "gaz" ? "active" : undefined))
+											li
 												a(href="gaz.html") Газ
-											li(class=(pagename === "contact" ? "active" : undefined))
+											li
 												a(href="contact.html") Контакти
-
-									</nav>
-								</div>
-							</div>
-						</div>
-						<div class="col-xl-1 col-lg-2">
-							<!-- Search Box -->
-							<div class="search d-none d-lg-block">
-								<ul>
-									<li>
-										<div class="nav-search search-switch">
-											<span class="fas fa-search"></span>
-										</div>
-									</li>
-								</ul>
-							</div>
-						</div>
-						<!-- Mobile Menu -->
-						<div class="col-12">
-							<div class="mobile_menu d-block d-lg-none"></div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- Header End -->
-</header>
+						.col-xl-1.col-lg-2
+							// Search Box
+							.search.d-none.d-lg-block
+								ul
+									li
+										.nav-search.search-switch
+											span.fas.fa-search
+						// Mobile Menu
+						.col-12
+							.mobile_menu.d-block.d-lg-none

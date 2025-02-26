@@ -1,56 +1,49 @@
-include include/head.html 
+include include/head.pug
 
-<body>
-	include include/preloader.html
+body
+	include include/preloader.pug
 	- const pagename = "electro"
 	include include/header.pug
-	<main>
-		<!--? Hero Start -->
-		<div class="slider-area2 section-bg2" data-background="assets/img/hero/hero7.jpg">
-			<div class="slider-height2 d-flex align-items-center">
-				<div class="container">
-					<div class="row">
-						<div class="col-xl-12">
-							<div class="hero-cap hero-cap2 text-center">
-								<h2>Електроенергія</h2>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- Hero End -->
-		<!--?  Electro Area start  -->
-		<section class="electro-section">
-			<div class="container">
 
-				<div class="row">
+	main
+		// Hero Start
+		.slider-area2.section-bg2(data-background="assets/img/hero/hero7.jpg")
+			.slider-height2.d-flex.align-items-center
+				.container
+					.row
+						.col-xl-12
+							.hero-cap.hero-cap2.text-center
+								h2 Електроенергія
 
-					<div class="col-12">
-						<h3>Нормативні документи:</h3>
-						<ul class="unordered-list">
-							<li><a href="https://zakon.rada.gov.ua/laws/show/2019-19#Text" target="_blank">Закон України «Про ринок електричної енергії»</a></li>
-							<li><a href="https://zakon.rada.gov.ua/laws/show/222-19#Text" target="_blank">Закон України «Про ліцензування видів господарської діяльності»</a></li>
-							<li><a href="https://zakon.rada.gov.ua/laws/show/1540-19#Text" target="_blank">Закон України «Про Національну комісію, що здійснює державне регулювання у сферах енергетики та комунальних послуг»</a></li>
-							<li><a href="https://zakon2.rada.gov.ua/laws/show/v1469874-17" target="_blank">Постанова НКРЕКП №1469 від 27.12.2017 р. «Про затвердження Ліцензійних умов провадження господарської діяльності з постачання електричної енергії споживачу»</a></li>
-							<li><a href="https://zakon.rada.gov.ua/laws/show/v0307874-18#Text" target="_blank">Постанова НКРЕКП №307 від 14.03.2018 «Про затвердження Правил ринку»</a></li>
-							<li><a href="https://zakon.rada.gov.ua/laws/show/v0308874-18#Text" target="_blank">Постанова НКРЕКП №308 від 14.03.2018 «Про затвердження Правил ринку «на добу наперед» та внутрішньодобового ринку»</a></li>
-							<li><a href="https://zakon.rada.gov.ua/laws/show/v0309874-18#Text" target="_blank">Постанова НКРЕКП №309 від 14.03.2018 «Про затвердження Кодексу системи передачі»</a></li>
-							<li><a href="https://zakon.rada.gov.ua/laws/show/v0310874-18#Text" target="_blank">Постанова НКРЕКП №310 від 14.03.2018 «Про затвердження Кодексу систем розподілу»</a></li>
-							<li><a href="https://zakon.rada.gov.ua/laws/show/v0311874-18#Text" target="_blank">Постанова НКРЕКП №311 від 14.03.2018 «Про затвердження Кодексу комерційного обліку електричної енергії»</a></li>
-							<li><a href="https://zakon.rada.gov.ua/laws/show/v0312874-18#Text" target="_blank">Постанова НКРЕКП №312 від 14.03.2018 «Про затвердження Правил роздрібного ринку електричної енергії»</a></li>
-							<li><a href="https://zakon.rada.gov.ua/laws/show/v0375874-18#Text" target="_blank">Постанова НКРЕКП № 375 від 12.06.2018 р. «Про затвердження Порядку забезпечення стандартів якості електропостачання та надання компенсацій споживачам за їх недотримання»</a></li>
-						</ul>
-					</div>
+		// Electro Area start
+		section.electro-section
+			.container
+				.row
+					.col-12
+						h3 Нормативні документи:
+						ul.unordered-list
+							li
+								a(href="https://zakon.rada.gov.ua/laws/show/2019-19#Text" target="_blank") Закон України «Про ринок електричної енергії»
+							li
+								a(href="https://zakon.rada.gov.ua/laws/show/222-19#Text" target="_blank") Закон України «Про ліцензування видів господарської діяльності»
+							li
+								a(href="https://zakon.rada.gov.ua/laws/show/1540-19#Text" target="_blank") Закон України «Про Національну комісію, що здійснює державне регулювання у сферах енергетики та комунальних послуг»
+							li
+								a(href="https://zakon2.rada.gov.ua/laws/show/v1469874-17" target="_blank") Постанова НКРЕКП №1469 від 27.12.2017 р. «Про затвердження Ліцензійних умов провадження господарської діяльності з постачання електричної енергії споживачу»
+							li
+								a(href="https://zakon.rada.gov.ua/laws/show/v0307874-18#Text" target="_blank") Постанова НКРЕКП №307 від 14.03.2018 «Про затвердження Правил ринку»
+							li
+								a(href="https://zakon.rada.gov.ua/laws/show/v0308874-18#Text" target="_blank") Постанова НКРЕКП №308 від 14.03.2018 «Про затвердження Правил ринку «на добу наперед» та внутрішньодобового ринку»
+							li
+								a(href="https://zakon.rada.gov.ua/laws/show/v0309874-18#Text" target="_blank") Постанова НКРЕКП №309 від 14.03.2018 «Про затвердження Кодексу системи передачі»
+							li
+								a(href="https://zakon.rada.gov.ua/laws/show/v0310874-18#Text" target="_blank") Постанова НКРЕКП №310 від 14.03.2018 «Про затвердження Кодексу систем розподілу»
+							li
+								a(href="https://zakon.rada.gov.ua/laws/show/v0311874-18#Text" target="_blank") Постанова НКРЕКП №311 від 14.03.2018 «Про затвердження Кодексу комерційного обліку електричної енергії»
+							li
+								a(href="https://zakon.rada.gov.ua/laws/show/v0312874-18#Text" target="_blank") Постанова НКРЕКП №312 від 14.03.2018 «Про затвердження Правил роздрібного ринку електричної енергії»
+							li
+								a(href="https://zakon.rada.gov.ua/laws/show/v0375874-18#Text" target="_blank") Постанова НКРЕКП № 375 від 12.06.2018 р. «Про затвердження Порядку забезпечення стандартів якості електропостачання та надання компенсацій споживачам за їх недотримання»
 
-				</div>
-			</div>
-		</section>
-		<!-- Electro Area End -->
-	</main>
-
-	include include/footer.html 
-	include include/bottom.html
-
-	</body>
-</html>
+	include include/footer.pug
+	include include/bottom.pug
